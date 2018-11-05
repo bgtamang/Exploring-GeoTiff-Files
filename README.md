@@ -17,5 +17,5 @@ However, I am not including the data from worldclim.org since it can be download
 # ABOUT THESE WILD BARLEYS
 These 25 Wild Barleys are selected by Dr. Gary's lab, Dept Agron Plant Genet, UMN as Minnesota Wild Barley Diversity Collection and crossed with Rasmussen, a commercial barley of Minnesota.
 
-These seeds were freely provided by Dr. Gary's lab (Nice et al 2016, doi: 10.1534/genetics.116.190736)
-Coordinates data were obtained from Dr. Brian's lab, Dept Plant Patho, UMN (Russell et al 2014, doi:10.1371/journal.pone.0086021)
+These seeds were freely provided by Dr. Gary's lab (Nice et al 2016, https://doi: 10.1534/genetics.116.190736)
+Coordinates data were obtained from Dr. Brian's lab, Dept Plant Patho, UMN (Russell et al 2014, https://doi:10.1371/journal.pone.0086021)
