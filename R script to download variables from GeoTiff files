@@ -1,0 +1,46 @@
+
+
+install.packages("raster")
+library (raster)
+
+coordinates <- read.csv(file = "coordinates.file.csv")
+coord <- coordinates[,2:3}
+
+# After you download the variable file from worldclim.org, VPD for this example, you will see 12 files for 12 months averaged data.
+
+###################################
+########### VPD data ##############
+###################################
+
+Jan <- raster ("/VPD raw data-30 sec resolution/wc2.0_30s_vapr_01.tif/")
+Feb <- raster ("/VPD raw data-30 sec resolution/wc2.0_30s_vapr_02.tif")
+Mar <- raster ("VPD raw data-30 sec resolution/wc2.0_30s_vapr_03.tif")
+Apr <- raster ("VPD raw data-30 sec resolution/wc2.0_30s_vapr_04.tif")
+May <- raster ("/VPD raw data-30 sec resolution/wc2.0_30s_vapr_05.tif")
+Jun <- raster ("VPD raw data-30 sec resolution/wc2.0_30s_vapr_06.tif")
+Jul <- raster ("/VPD raw data-30 sec resolution/wc2.0_30s_vapr_07.tif")
+Aug <- raster ("/VPD raw data-30 sec resolution/wc2.0_30s_vapr_08.tif")
+Sep <- raster ("/VPD raw data-30 sec resolution/wc2.0_30s_vapr_09.tif")
+Oct <- raster ("/VPD raw data-30 sec resolution/wc2.0_30s_vapr_10.tif")
+Nov <- raster ("/VPD raw data-30 sec resolution/wc2.0_30s_vapr_11.tif")
+Dec <- raster ("/VPD raw data-30 sec resolution/wc2.0_30s_vapr_12.tif")
+
+# Extracting variable values corresponding to coordinates along with cell number in the original file.
+Jan.result <-extract (Jan, SpatialPoints(coord), sp =T, cellnumbers =T,df = T)
+Feb.result <-extract (Feb, SpatialPoints(coord), sp =T, cellnumbers =T,df = T)
+Mar.result <-extract (Mar, SpatialPoints(coord), sp =T, cellnumbers =T,df = T)
+Apr.result <-extract (Apr, SpatialPoints(coord), sp =T, cellnumbers =T,df = T)
+May.result <-extract (May, SpatialPoints(coord), sp =T, cellnumbers =T,df = T)
+Jun.result <-extract (Jun, SpatialPoints(coord), sp =T, cellnumbers =T,df = T)
+Jul.result <-extract (Jul, SpatialPoints(coord), sp =T, cellnumbers =T,df = T)
+Aug.result <-extract (Aug, SpatialPoints(coord), sp =T, cellnumbers =T,df = T)
+Sep.result <-extract (Sep, SpatialPoints(coord), sp =T, cellnumbers =T,df = T)
+Oct.result <-extract (Oct, SpatialPoints(coord), sp =T, cellnumbers =T,df = T)
+Nov.result <-extract (Nov, SpatialPoints(coord), sp =T, cellnumbers =T,df = T)
+Dec.result <-extract (Dec, SpatialPoints(coord), sp =T, cellnumbers =T,df = T)
+
+
+Final.result <- cbind(coordinates,Jan.result@data, Feb.result@data,Mar.result@data, Apr.result@data, May.result@data, Jun.result@data, Jul.result@data, Aug.result@data, Sep.result@data, Oct.result@data, Nov.result@data, Dec.result@data)
+write.csv(Final.result, file = "/Users/bgtamang/UMN/UMN LAB WORKS/RESEARCH DATA/4. BARLEY combined (Exp23 and Exp24)/Worldclim.org data analysis/Final.result.VPD.csv")
+
+##############  The End  ##############
