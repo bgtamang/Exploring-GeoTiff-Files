@@ -3,7 +3,7 @@ This repository is to download variables data from GeoTiff files.
 
 I was working on measuring canopy conductance of wild barleys. Further, I needed to see how these traits correlate with their environmental variables such as precipitation, maximum and minimum temperature, altitude, water vapor pressure etc at the center of origin.
 
-I have latitude and longitude coordinates of the center of origin of these wild barleys. Further, the environmental data are available at worldclim.org/version2 at different spatial resolution.
+I have latitude and longitude coordinates of the center of origin of these wild barleys. Further, the environmental data are available at worldclim.org/version2 (Fick and Hijmans, 2017, https://doi.org/10.1002/joc.5086) at different spatial resolution.
 
 However, the data in worldclim.org are in GeoTiff format which needs to be extracted using softwares such as ArcGis or use R with packages such as raster.
 
